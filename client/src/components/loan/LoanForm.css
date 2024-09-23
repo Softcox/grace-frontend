@@ -1,0 +1,147 @@
+.loanform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loanform .container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 819px;
+  height: 635px;
+  box-sizing: border-box;
+  padding: 50px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
+}
+
+.loanform .container .header{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.loanform .container .header h3{
+  margin: 0%;
+  display: flex;
+  width: 100%;
+  color: #172554;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.loanform .container .header .close-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#172554 ;
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.loanform .container .body{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.loanform .container .body .input-group{
+  margin-bottom: 20px;
+}
+
+.loanform .container .body .input-group label{
+  color: #172554;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.loanform .container .body .input-group .input-field{
+  width: 100%;
+  height: 59px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #172554;
+  color: rgba(23, 37, 84, 0.50);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-left: 20px;
+}
+
+.loanform .container .body .input-group .suggestion-wrapper{
+  position: relative;
+}
+
+.loanform .container .body .input-group .suggestion-list{
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loanform .container .body .input-group .suggestion-item{
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.loanform .container .body .input-group .suggestion-item:hover{
+  background-color: #f1f1f1;
+}
+
+.loanform .container .body .action{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 30px 20px;
+  gap: 30px;
+
+}
+
+.loanform .container .body .action .clear-button, .submit-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #172554;
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+}

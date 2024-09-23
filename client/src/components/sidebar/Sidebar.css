@@ -1,0 +1,163 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.sidebar-container .logo1{
+  width: 108px;
+height: 37px;
+flex-shrink: 0;
+}
+
+.sidebar-container .logo2{
+  width: 45px;
+height: 37px;
+flex-shrink: 0;
+}
+
+.sidebar {
+  color: white;
+  transition: width 0.3s;
+  width: 108px;
+  height: 100vh;
+  background: #172554;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar .toggle-button {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.sidebar .toggle-button:hover {
+  background-color: #2c3e50;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+  padding: 10px;
+  width: 90%;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+
+.sidebar li img {
+  width: 18px;
+  height: 18px;
+  /* margin-right: 10px; */
+  transition: filter 0.3s; /* Smooth transition */
+}
+
+.sidebar li a.active {
+  background-color: #fff; /* White background for active links */
+  color: #ecf0f1; /* Text color */
+  font-weight: bold;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.sidebar li a.active img {
+  filter: invert(1); /* Invert colors */
+}
+
+.sidebar.expanded li a.active span {
+  display: inline;
+  color: #172554;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.sidebar.collapsed li a span {
+  display: none;
+}
+
+.sidebar.expanded li a span {
+  display: inline;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.sidebar.collapsed li a {
+  justify-content: center;
+}
+
+.sidebar.expanded li a {
+  justify-content: start;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s;
+  overflow: auto;
+}
+
+.sidebar.collapsed + .content {
+  margin-left: 88px;
+}
+
+.sidebar.expanded + .content {
+  margin-left: 200px;
+} 
